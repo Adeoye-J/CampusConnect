@@ -1,7 +1,7 @@
 const { exec } = require("child_process");
 
 // Commit message with the current date and time
-const commitMessage = `Eduventure commit at ${new Date().toLocaleString()}`;
+const commitMessage = `Campus Connect commit at ${new Date().toLocaleString()}`;
 
 // Function to run Git commands
 const runCommand = (command) => {
