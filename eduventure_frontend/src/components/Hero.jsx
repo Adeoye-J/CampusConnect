@@ -7,7 +7,7 @@ const Hero = () => {
                 <h1>Unleash Your Campus Potential</h1>
                 <button>Join Us</button>
 
-                <div className="">
+                <div className=""> 
                     <p>Innovate Now</p>
                     <p>Connect & Collaborate</p>
                 </div>
