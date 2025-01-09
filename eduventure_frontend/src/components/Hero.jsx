@@ -5,10 +5,10 @@ const Hero = () => {
     return (
         <div className='sm:m-4 border border-primary bg-primary sm:rounded-lg px-3 md:px-12 py-12 text-white flex'>
             <div className="w-full lg:w-3/5 flex flex-col items-center gap-5 justify-center">
-                <div className="flex flex-col gap-5 sm:items-end">  
+                <div className="flex flex-col gap-5 sm:items-end ">  
                     {/* <h1 className='text-5xl md:text-7xl font-bold flex flex-col items-center text-center sm:items-end'>Unleash Your <span className='text-tertiary inline-block'>Campus Potential</span></h1> */}
-                    <h1>Unleash Your</h1>
-                    <h1></h1>
+                    <h1 className='text-5xl md:text-6xl xl:text-7xl font-bold text-center sm:text-right'>Unleash Your</h1>
+                    <h1 className='text-5xl md:text-6xl xl:text-7xl font-bold text-center sm:text-right text-tertiary'>Campus Potential</h1>
                     <button className='border border-white px-10 py-2 rounded-full font-semibold hover:border-tertiary hover:text-tertiary hover:scale-105 transition-all duration-500'>Join Us</button>
                 </div>
 

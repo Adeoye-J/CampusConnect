@@ -9,6 +9,8 @@ const Section1 = () => {
             </div>
             <div className="flex-1 flex flex-col gap-7 items-start justify-center">
                 <h2 className='text-7xl font-semibold'>Empower Your <span className='text-tertiary'>Campus Experience</span></h2>
+                <h1></h1>
+                <h1></h1>
                 <p className='text-gray-700 text-lg font-semibold'>Discover, connect, and thrive with fellow students!</p>
                 <button className='border border-black px-10 py-2 rounded-full font-semibold hover:border-tertiary hover:text-tertiary hover:scale-105 transition-all duration-500'>Explore More</button>
             </div>
