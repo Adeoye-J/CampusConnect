@@ -32,13 +32,13 @@ const Voices = () => {
     ]
 
     return (
-        <div className='bg-primary px-3 md:px-12 lg:px-32 py-24 m-4 rounded-lg'>
+        <div className='bg-primary px-3 py-6 md:px-12 md:py-12 lg:px-32 lg:py-24 m-4 rounded-lg'>
             <span className='px-6 py-2 border border-white rounded-full text-white'>What They Say</span>
-            <h2 className='text-center mb-14 text-6xl font-medium text-white'>Student Voices</h2>
-            <div className="grid grid-cols-3 gap-12">
+            <h2 className='text-center mb-14 text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-7xl font-medium text-white'>Student Voices</h2>
+            <div className="grid grid-cols-3 gap-6 md:gap-12">
                 {
                     voices.map((item, index) => (
-                        <div key={index} className="text-white flex flex-col items-start gap-5 p-8 rounded-xl bg-blue-600 shadow-lg text-lg">
+                        <div key={index} className="text-white flex flex-col items-center text-center lg:text-start lg:items-start gap-5 p-3 justify-between md:p-8 rounded-xl bg-blue-600 shadow-lg text-lg">
                             <h3>{item.comment}</h3>
                             <p className='font-bold'>{item.name}</p>
                         </div>
