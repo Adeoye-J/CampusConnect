@@ -4,7 +4,7 @@ import pic1 from "/home/campus_connect.png"
 const Hero = () => {
     return (
         <div className='sm:m-4 border border-primary bg-primary sm:rounded-lg px-12 py-12 text-white flex'>
-            <div className="w-full md:w-3/5 flex flex-col items-center gap-5 justify-center">
+            <div className="w-full lg:w-3/5 flex flex-col items-center gap-5 justify-center">
                 <div className="flex flex-col gap-5 sm:items-end">
                     <h1 className='text-5xl md:text-7xl font-bold flex flex-col items-center text-center sm:items-end'>Unleash Your <span className='text-tertiary'>Campus Potential</span></h1>
                     <button className='border border-white px-10 py-2 rounded-full font-semibold hover:border-tertiary hover:text-tertiary hover:scale-105 transition-all duration-500'>Join Us</button>
@@ -17,8 +17,8 @@ const Hero = () => {
 
                 <p className='text-center'>A vibrant platform for students to showcase talents and services.</p>
             </div>
-            <div className="w-2/5 hidden md:flex items-center justify-center">
-                <img src={pic1} alt="" />
+            <div className="w-2/5 hidden lg:flex items-center justify-center">
+                <img src={pic1} alt="Sample Image to be replaced" />
             </div>
         </div>
     )
