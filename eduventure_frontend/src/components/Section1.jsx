@@ -3,7 +3,7 @@ import section1 from "/home/lodge12.jpg"
 
 const Section1 = () => {
     return (
-        <div className='flex flex-col lg:flex-row px-3 sm:px-12 py-32 m-4 gap-10'>
+        <div className='flex flex-col lg:flex-row px-3 sm:px-12 py-12 md:py-32 m-4 gap-10'>
             <div className="w-full lg:w-2/5 flex items-center justify-center">
                 <img src={section1} alt="" className='rounded-xl' />
             </div>
