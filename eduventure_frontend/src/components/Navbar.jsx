@@ -8,7 +8,7 @@ const Navbar = () => {
     const navigate = useNavigate()
 
     return (
-        <div className="bg-primary px-12 py-4 m-4 rounded-full flex items-center justify-between text-sm">
+        <div className="bg-primary px-3 sm:px-12 py-4 sm:m-4 sm:rounded-full flex items-center justify-between text-sm">
             <img onClick={() => navigate("/")} src={student_connect_main} alt="" className='w-40 sm:w-48 lg:w-64 cursor-pointer' />
             <ul className="hidden md:flex items-start gap-5 font-bold text-sm lg:text-base">
                 <NavLink to='/' className={"hover:scale-105 transition-all duration-300"}>
