@@ -32,7 +32,7 @@ const Voices = () => {
     ]
 
     return (
-        <div className='bg-primary px-32 py-24 m-4 rounded-lg'>
+        <div className='bg-primary px-3 md:px-12 lg:px-32 py-24 m-4 rounded-lg'>
             <span className='px-6 py-2 border border-white rounded-full text-white'>What They Say</span>
             <h2 className='text-center mb-14 text-6xl font-medium text-white'>Student Voices</h2>
             <div className="grid grid-cols-3 gap-12">
