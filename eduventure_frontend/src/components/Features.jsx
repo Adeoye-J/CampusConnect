@@ -22,16 +22,16 @@ const Features = () => {
     ]
 
     return (
-        <div className='px-32 py-24 m-4 rounded-lg -z-30 text-black'>
+        <div className='px-12 sm:px-3 md:px-12 py-12 lg:px-32 lg:py-24 sm:m-4 rounded-lg text-black'>
             <span className='px-6 py-2 border border-black rounded-full'>Key Features</span>
-            <h2 className='text-center mb-14 text-6xl font-medium'>Why You’ll Love This Platform</h2>
+            <h2 className='text-center mb-14 text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-7xl font-medium mt-4'>Why You’ll Love This Platform</h2>
             <hr className='h-0.5 bg-gray-200' />
             
             <div className="">
                 {
                     features.map((item, index) => (
                         <div className="">
-                            <div className="flex justify-between py-10 px-5">
+                            <div className="flex justify-between gap-4 py-10 px-5 flex-col md:flex-row">
                                 <h3 className='flex-1 font-normal text-3xl'>{item.feature}</h3>
                                 <p className='flex-1 text-xl'>{item.content}</p>
                             </div>

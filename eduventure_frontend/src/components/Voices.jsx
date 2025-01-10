@@ -32,9 +32,9 @@ const Voices = () => {
     ]
 
     return (
-        <div className='bg-primary px-12 sm:px-3 md:px-12 py-12 lg:px-32 lg:py-24 sm:m-4 rounded-lg'>
+        <div className='bg-primary px-12 sm:px-3 md:px-12 py-12 lg:px-32 lg:py-24 sm:m-4 sm:rounded-lg'>
             <span className='px-6 py-2 border border-white rounded-full text-white'>What They Say</span>
-            <h2 className='text-center mb-14 text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-7xl font-medium text-white'>Student Voices</h2>
+            <h2 className='text-center mb-14 text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-7xl font-medium text-white mt-4'>Students' Voices</h2>
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-12">
                 {
                     voices.map((item, index) => (

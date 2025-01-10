@@ -25,16 +25,16 @@ const Benefits = () => {
     ]
 
     return (
-        <div className='bg-primary px-32 py-24 m-4 rounded-lg'>
+        <div className='bg-primary px-12 sm:px-3 md:px-12 py-12 lg:px-32 lg:py-24 sm:m-4 sm:rounded-lg max-sm:mt-1'>
             <span className='px-6 py-2 border border-white rounded-full text-white'>Key Features</span>
-            <h2 className='text-center mb-14 text-6xl font-medium text-white'>Why Choose Us?</h2>
-            <div className="grid grid-cols-3 gap-10">
+            <h2 className='text-center mb-14 text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-7xl font-medium text-white mt-4'>Why Choose Us?</h2>
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-10">
                 {
                     features.map((item, index) => (
                         <div key={index} className="group">
                             <div className="relative -bottom-6 transition-all duration-500 z-10">
-                                <p className='p-3 px-4 rounded-t-2xl bg-tertiary font-medium text-lg w-2/3 text-white'>{item.section}</p>
-                                <div className="p-3 rounded-tr-2xl bg-tertiary" />
+                                <p className='p-3 px-4 rounded-t-2xl bg-tertiary font-medium text-lg w-2/3 text-white text-nowrap'>{item.section}</p>
+                                <div className="p-3 rounded-tr-2xl bg-white" />
                             </div>
                             <div className="border rounded-2xl bg-white px-10 py-8 min-h-[500px] flex flex-col gap-7 justify-between items-start">
                                 <div className="font-medium flex flex-col items-start gap-3">
