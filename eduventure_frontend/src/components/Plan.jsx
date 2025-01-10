@@ -36,7 +36,7 @@ const Plan = () => {
                 "Priority Support"
             ]
         }
-    ]
+    ] 
 
     return (
         <div className='bg-primary px-12 sm:px-3 md:px-12 py-12 lg:px-28 lg:py-24 sm:m-4 sm:rounded-lg'>
