@@ -42,7 +42,7 @@ const Benefits = () => {
                                     <p className='text-sm text-[#333]'>{item.content}</p>
                                 </div>
                                 <button className='text-xs px-3 md:px-6 py-2 border rounded-full border-tertiary hover:text-tertiary hover:scale-105 transition-all duration-300'>Learn More</button>
-                                    <div className="w-full rounded-xl overflow-hidden">
+                                <div className="w-full rounded-xl overflow-hidden">
                                     <img src={item.image} alt="Features Image" className='rounded-xl group-hover:scale-105 transition-all duration-300' />
                                 </div>
                             </div>
