@@ -32,13 +32,13 @@ const Voices = () => {
     ]
 
     return (
-        <div className='bg-primary px-12 sm:px-3 md:px-12 py-12 lg:px-32 lg:py-24 sm:m-4 sm:rounded-lg'>
-            <span className='px-6 py-2 border border-white rounded-full text-white'>What They Say</span>
-            <h2 className='text-center mb-14 text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-7xl font-medium text-white mt-4'>Students' Voices</h2>
-            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-12">
+        <div className='bg-primary px-2 sm:px-3 md:px-12 py-12 lg:px-32 lg:py-24 sm:m-4 sm:rounded-lg'>
+            <span className='max-sm:text-xs px-4 md:px-6 py-2 border border-white rounded-full text-white'>What They Say</span>
+            <h2 className='text-center mb-10 text-2xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-7xl font-medium text-white mt-4'>Students' Voices</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-12">
                 {
                     voices.map((item, index) => (
-                        <div key={index} className="text-white flex flex-col items-center text-center lg:text-start lg:items-start gap-5 p-4 justify-between md:p-8 rounded-xl bg-blue-600 shadow-lg text-lg">
+                        <div key={index} className="text-white flex flex-col items-center text-center lg:text-start lg:items-start gap-5 p-4 justify-between md:p-8 rounded-xl bg-blue-600 shadow-lg text-sm md:text-lg">
                             <h3>{item.comment}</h3>
                             <p className='font-bold'>{item.name}</p>
                         </div>
