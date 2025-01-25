@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, NavLink, useNavigate } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import student_connect_main from '/student_connect_main.png'
 
@@ -31,7 +31,6 @@ const Navbar = () => {
             </ul>
             <div className="">
                 <button onClick={handleGetStarted} className='border border-white rounded-full py-2 lg:px-10 px-6 text-sm sm:text-base font-semibold text-white hover:border-tertiary hover:text-tertiary hover:scale-105 transition-all duration-500'>Get Started</button>
-                
             </div>
         </div>
     )
