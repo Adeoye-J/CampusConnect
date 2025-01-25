@@ -21,7 +21,6 @@ function App() {
         <Voices />
         <Benefits />
         <Features />
-        <Plan />
     </div>
   )
 }
