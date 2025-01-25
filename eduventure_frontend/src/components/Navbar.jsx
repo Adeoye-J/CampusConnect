@@ -7,6 +7,11 @@ const Navbar = () => {
 
     const navigate = useNavigate()
 
+    const handleGetStarted = () => {
+        toast.success('Get Started')
+        navigate('/sign-up')
+    }
+
     return (
         <div className="bg-primary px-3 sm:px-12 py-4 sm:m-4 sm:rounded-full flex items-center justify-between text-sm">
             <img onClick={() => navigate("/")} src={student_connect_main} alt="" className='w-40 sm:w-48 lg:w-64 cursor-pointer' />
@@ -25,7 +30,7 @@ const Navbar = () => {
                 </NavLink>
             </ul>
             <div className="">
-                <button className='border border-white rounded-full py-2 lg:px-10 px-6 text-sm sm:text-base font-semibold text-white hover:border-tertiary hover:text-tertiary hover:scale-105 transition-all duration-500'>Get Started</button>
+                <button onClick={handleGetStarted} className='border border-white rounded-full py-2 lg:px-10 px-6 text-sm sm:text-base font-semibold text-white hover:border-tertiary hover:text-tertiary hover:scale-105 transition-all duration-500'>Get Started</button>
                 
             </div>
         </div>

@@ -9,7 +9,11 @@ function App() {
   return (
     <div className='App'>
         <ToastContainer />
-        <Home />
+        <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/features' element={<Home />} />
+            <Route path='/contact-us' element={<Home />} />
+        </Routes>
     </div>
   )
 }
