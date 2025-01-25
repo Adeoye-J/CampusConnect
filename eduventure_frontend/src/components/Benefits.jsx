@@ -31,12 +31,12 @@ const Benefits = () => {
             <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 row-auto-1">
                 {
                     features.map((item, index) => (
-                        <div key={index} className="group flex flex-col gap-3">
+                        <div key={index} className="group flex flex-col">
                             <div className="relative -bottom-6 transition-all duration-500 z-10">
                                 <p className='p-2 md:p-3 px-4 rounded-t-2xl bg-tertiary font-medium text-sm md:text-lg w-2/3 text-white text-nowrap'>{item.section}</p>
-                                <div className="p-3 rounded-tr-2xl bg-white" />
+                                {/* <div className="p-3 rounded-tr-2xl bg-white" /> */}
                             </div>
-                            <div className="border rounded-2xl bg-white px-5 py-4 md:py-8 flex flex-col gap-3 justify-between">
+                            <div className="border rounded-2xl bg-white px-5 py-4 md:py-8 flex flex-col gap-3 justify-between h-full">
                                 <div className="font-medium flex flex-col items-start gap-3">
                                     <h3 className='text-lg md:text-2xl'>{item.title}</h3>
                                     <p className='text-sm text-[#333]'>{item.content}</p>
