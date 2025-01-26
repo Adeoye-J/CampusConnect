@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import campus_connect_main from '/authentication/authentication_image.jpg'
 import { toast } from 'react-toastify'
 import axios from 'axios'
+import { AppContext } from '../context/AppContext'
 
 const SignUp = () => {
+
+    const {backendUrl, setToken} = useContext(AppContext)
 
     const navigate = useNavigate()
 
@@ -28,13 +31,14 @@ const SignUp = () => {
                     toast.error(data.message)
                 }
             } else {
-                const {data} = await axios.post(backendUrl + "/api/user/login", {email, password})
-                if (data.success) {
-                    localStorage.setItem("token", data.token)
-                    setToken(data.token)
-                } else {
-                    toast.error(data.message)
-                }
+                // const {data} = await axios.post(backendUrl + "/api/user/login", {email, password})
+                // if (data.success) {
+                //     localStorage.setItem("token", data.token)
+                //     setToken(data.token)
+                // } else {
+                //     toast.error(data.message)
+                // }
+                console.log("Login")
             }
 
         } catch (error) {

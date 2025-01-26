@@ -2,13 +2,15 @@ import React, { createContext } from 'react'
 
 export const AppContext = createContext()
 
-const AppContextProvider = (children) => {
+const AppContextProvider = (props) => {
 
-    const value = {}
+    const backendUrl = import.meta.env.VITE_BACKEND_URL
+
+    const value = {backendUrl}
 
     return (
         <AppContext.Provider value={value}>
-            {children}
+            {props.children}
         </AppContext.Provider>
     )
 }

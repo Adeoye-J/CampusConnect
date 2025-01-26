@@ -2,7 +2,7 @@ import userModel from "../models/userModel.js";
 import jwt from "jsonwebtoken";
 import validator from "validator";
 
-export const registerUser = async (req, res) => {
+const registerUser = async (req, res) => {
     const { name, email, password } = req.body;
     try {
         if (!name || !email || !password) {
