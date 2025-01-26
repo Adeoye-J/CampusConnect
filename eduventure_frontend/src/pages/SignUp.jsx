@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import campus_connect_main from '/authentication/authentication_image.jpg'
+import { toast } from 'react-toastify'
 
 const SignUp = () => {
 
@@ -14,29 +15,30 @@ const SignUp = () => {
     const onSubmitHandler = async (event) => {
         event.preventDefault()
 
-        // try {
+        try {
             
-        //     if (state === "Sign Up") {
-        //         const {data} = await axios.post(backendUrl + "/api/user/register", {name, email, password})
-        //         if (data.success) {
-        //             localStorage.setItem("token", data.token)
-        //             setToken(data.token)
-        //         } else {
-        //             toast.error(data.message)
-        //         }
-        //     } else {
-        //         const {data} = await axios.post(backendUrl + "/api/user/login", {email, password})
-        //         if (data.success) {
-        //             localStorage.setItem("token", data.token)
-        //             setToken(data.token)
-        //         } else {
-        //             toast.error(data.message)
-        //         }
-        //     }
+            if (state === "Sign Up") {
+                const {data} = await axios.post(backendUrl + "/api/user/register", {name, email, password})
+                if (data.success) {
+                    localStorage.setItem("token", data.token)
+                    toast.success("Account Created Successfully")
+                    setToken(data.token)
+                } else {
+                    toast.error(data.message)
+                }
+            } else {
+                const {data} = await axios.post(backendUrl + "/api/user/login", {email, password})
+                if (data.success) {
+                    localStorage.setItem("token", data.token)
+                    setToken(data.token)
+                } else {
+                    toast.error(data.message)
+                }
+            }
 
-        // } catch (error) {
-        //     toast.error(error.message)
-        // }
+        } catch (error) {
+            toast.error(error.message)
+        }
     }
 
     // useEffect(() => {
