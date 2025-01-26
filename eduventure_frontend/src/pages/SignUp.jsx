@@ -15,30 +15,33 @@ const SignUp = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const [name, setName] = useState("")
+    const [loading, setLoading] = useState(false)
 
     const onSubmitHandler = async (event) => {
         event.preventDefault()
+        setLoading(true)
 
         try {
-            
             if (state === "Sign Up") {
                 const {data} = await axios.post(backendUrl + "/api/user/register", {name, email, password})
                 if (data.success) {
                     localStorage.setItem("token", data.token)
+                    setToken(data.token)
+                    console.log(data)
                     toast.success("Account Created Successfully")
+                } else {
+                    toast.error(data.message)
+                }
+                setLoading(false)
+            } else {
+                const {data} = await axios.post(backendUrl + "/api/user/login", {email, password})
+                if (data.success) {
+                    localStorage.setItem("token", data.token)
                     setToken(data.token)
                 } else {
                     toast.error(data.message)
                 }
-            } else {
-                // const {data} = await axios.post(backendUrl + "/api/user/login", {email, password})
-                // if (data.success) {
-                //     localStorage.setItem("token", data.token)
-                //     setToken(data.token)
-                // } else {
-                //     toast.error(data.message)
-                // }
-                console.log("Login")
+                setLoading(false)
             }
 
         } catch (error) {
@@ -76,7 +79,7 @@ const SignUp = () => {
                         <p>Password</p>
                         <input className='border border-zinc-300 rounded w-full p-2 mt-1' type="password" value={password} onChange={(e) => setPassword(e.target.value)} required/>
                     </div>
-                    <button type='submit' className='bg-blue-400 text-white w-full py-2 rounded-md text-base'>{state === "Sign Up" ? "Create Account" : "Login"}</button>
+                    <button type='submit' className='bg-blue-400 text-white w-full py-2 rounded-md text-base'>{state === "Sign Up" ? `${loading ? "Signing Up..." : "Create Account"}` : `${loading ? "Loging In..." : "Log In"}`}</button>
                     {
                         state === "Sign Up"
                         ? <p>Already have an account? <span onClick={() => setState("Login")} className='text-blue-400 underline cursor-pointer'>Login here</span></p>
