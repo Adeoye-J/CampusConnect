@@ -1,5 +1,7 @@
 import jwt from "jsonwebtoken";
 
+// User Authentication Middleware
+
 const authUser = async (req, res, next) => {
     try {
         const {token} = req.headers;
@@ -12,6 +14,9 @@ const authUser = async (req, res, next) => {
 
         req.body.userId = decoded_token.id;
     } catch (error) {
-        return res.status(401).json({success: false, message: "Invalid Token"});
+        console.log(error);
+        res.status(401).json({success: false, message: error.message});
     }
 }
+
+export default authUser;
