@@ -26,14 +26,14 @@ export const registerUser = async (req, res) => {
             password: hashedPassword
         };
 
-        // const user = await userModel.create(userData);
+        const user = await userModel.create(userData);
 
         // Does the same thing with the code below
 
         // const newUser = new userModel(userData);
         // const user = await newUser.save();
 
-        // const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
+        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: "1h" });
 
         // res.json({success: true, token})
     
