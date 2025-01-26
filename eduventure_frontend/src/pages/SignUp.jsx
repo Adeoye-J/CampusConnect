@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import campus_connect_main from '/authentication/authentication_image.jpg'
 import { toast } from 'react-toastify'
+import axios from 'axios'
 
 const SignUp = () => {
 
