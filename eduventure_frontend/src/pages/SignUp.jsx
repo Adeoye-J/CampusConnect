@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import campus_connect_main from '/authentication/authentication_image.jpg'
 import { toast } from 'react-toastify'
@@ -49,11 +49,11 @@ const SignUp = () => {
         }
     }
 
-    // useEffect(() => {
-    //     if (token) {
-    //         navigate("/")
-    //     }
-    // }, [token])
+    useEffect(() => {
+        if (token) {
+            navigate("/")
+        }
+    }, [token])
 
     return (
         <form onSubmit={onSubmitHandler} action="" className='h-[80vh] w-full flex flex-row'>
