@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import student_connect_main from '/student_connect_main.png'
+import { AppContext } from '../context/AppContext'
 
 const Navbar = () => {
+
+    const {token, setToken} = useContext(AppContext)
 
     const navigate = useNavigate()
 
@@ -30,7 +33,17 @@ const Navbar = () => {
                 </NavLink>
             </ul>
             <div className="">
-                <button onClick={handleGetStarted} className='border border-white rounded-full py-2 lg:px-10 px-6 text-sm sm:text-base font-semibold text-white hover:border-tertiary hover:text-tertiary hover:scale-105 transition-all duration-500'>Get Started</button>
+                {
+                    token ?
+                    <>
+                        <button onClick={() => setToken("")} className='border border-white rounded-full py-2 lg:px-10 px-6 text-sm sm:text-base font-semibold text-white hover:border-tertiary hover:text-tertiary hover:scale-105 transition-all duration-500'>Logout</button>
+                    </>
+                    :
+                    <>
+                        <button onClick={handleGetStarted} className='border border-white rounded-full py-2 lg:px-10 px-6 text-sm sm:text-base font-semibold text-white hover:border-tertiary hover:text-tertiary hover:scale-105 transition-all duration-500'>Sign Up</button>
+                    </>
+                }
+                {/* <button onClick={handleGetStarted} className='border border-white rounded-full py-2 lg:px-10 px-6 text-sm sm:text-base font-semibold text-white hover:border-tertiary hover:text-tertiary hover:scale-105 transition-all duration-500'>Get Started</button> */}
             </div>
         </div>
     )

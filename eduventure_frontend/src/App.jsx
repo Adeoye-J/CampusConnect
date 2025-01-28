@@ -8,6 +8,7 @@ import Navbar from './components/Navbar'
 import SignUp from './pages/SignUp'
 import { AppContext } from './context/AppContext'
 import TopNav from './components/dashboard/TopNav'
+import Dashboard from './pages/Dashboard'
 
 function App() {
 
@@ -16,26 +17,30 @@ function App() {
   return (
     <div className='App'>
         <ToastContainer />
-        {
-            token ?
+        {/* { */}
+            {/* // token ?
 
-            <>
-                <TopNav />
-            </>
+            // <>
+            //     <TopNav />
+            //     <Routes>
+            //         <Route path='/dashboard' element={<Dashboard />} />
+            //     </Routes>
+            // </>
 
-            : 
+            // : 
 
-            <>
-                <Navbar />
+            // <> */}
+                {token ? <TopNav /> : <Navbar />}
                 <Routes>
                     <Route path='/' element={<Home />} />
                     <Route path='/features' element={<Home />} />
                     <Route path='/contact-us' element={<Home />} />
                     <Route path='*' element={<NotFound />} />
                     <Route path='/sign-up' element={<SignUp />} />
+                    <Route path='/dashboard' element={<Dashboard />} />
                 </Routes>
-            </>
-        }
+            {/* // </> */}
+        {/* } */}
     </div>
   )
 }

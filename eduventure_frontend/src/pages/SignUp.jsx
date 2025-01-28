@@ -7,7 +7,7 @@ import { AppContext } from '../context/AppContext'
 
 const SignUp = () => {
 
-    const {backendUrl, setToken} = useContext(AppContext)
+    const {backendUrl, token, setToken} = useContext(AppContext)
 
     const navigate = useNavigate()
 
@@ -45,13 +45,15 @@ const SignUp = () => {
             }
 
         } catch (error) {
+            console.log(error)
             toast.error(error.message)
+            setLoading(false)
         }
     }
 
     useEffect(() => {
         if (token) {
-            navigate("/")
+            navigate("/dashboard")
         }
     }, [token])
 
@@ -61,7 +63,7 @@ const SignUp = () => {
                 <img onClick={() => navigate("/")} src={campus_connect_main} alt="" className='w-full h-full object-cover cursor-pointer' />
             </div>
             <div className="flex-1 h-full">
-                <div className="flex flex-col h-full justify-between gap-3 m-auto p-8 min-w-[340px] sm:min-w-96 border rounded-xl text-zinc-600 text-sm shadow-lg">
+                <div className="flex flex-col h-full justify-between gap-3 m-auto p-8 min-w-[340px] sm:min-w-96 text-zinc-600 text-sm">
                     <p className='text-2xl font-semibold'>{state === "Sign Up" ? "Create Account" : "Login"}</p>
                     <p>Please {state === "Sign Up" ? "Sign Up" : "Log In"} to Explore More</p>
                     {
