@@ -11,7 +11,7 @@ const Navbar = () => {
     const navigate = useNavigate()
 
     const handleGetStarted = () => {
-        toast.success('Get Started')
+        // toast.success('Get Started')
         navigate('/sign-up')
     }
 
@@ -43,7 +43,6 @@ const Navbar = () => {
                         <button onClick={handleGetStarted} className='border border-white rounded-full py-2 lg:px-10 px-6 text-sm sm:text-base font-semibold text-white hover:border-tertiary hover:text-tertiary hover:scale-105 transition-all duration-500'>Sign Up</button>
                     </>
                 }
-                {/* <button onClick={handleGetStarted} className='border border-white rounded-full py-2 lg:px-10 px-6 text-sm sm:text-base font-semibold text-white hover:border-tertiary hover:text-tertiary hover:scale-105 transition-all duration-500'>Get Started</button> */}
             </div>
         </div>
     )
