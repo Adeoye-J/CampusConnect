@@ -15,6 +15,6 @@ app.use(cors());
 // Routes
 app.use('/api/user', userRouter);
 
-const PORT = process.env.PORT || 6000;
+const PORT = process.env.PORT || 5100;
 
 app.listen(PORT, () => console.log(`Server running and listening on port ${PORT}`));
